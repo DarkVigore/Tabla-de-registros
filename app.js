@@ -1,11 +1,13 @@
-// Lista de usuarios inicial
-let users = [
+// Recuperar los datos guardados en localStorage o usar la lista inicial
+let users = JSON.parse(localStorage.getItem('users')) || [
     { nombre: 'Pepe', apellido: 'Rodriguez', direccion: 'cra 20', cedula: '112233', pais: 'Colombia', ciudad: 'Barranquilla', correo: 'pepe@gmail.com', telefono: '3012569654' },
     { nombre: 'Marco', apellido: 'Perez', direccion: 'cra 30', cedula: '125423', pais: 'Colombia', ciudad: 'Bogota', correo: 'marko@gmail.com', telefono: '3004522365' },
     { nombre: 'Julieta', apellido: 'Arias', direccion: 'cra 40', cedula: '145874', pais: 'Colombia', ciudad: 'Cali', correo: 'julieta@gmail.com', telefono: '3044568956' }
 ];
 
+// Seleccionar el cuerpo de la tabla y el contenedor de la tabla
 let cuerpotabla = document.getElementById('cuerpo-tabla');
+let tablaContainer = document.getElementById('tabla-container');
 
 // Función para listar usuarios en la tabla
 const listar = () => {
@@ -69,8 +71,8 @@ const register = () => {
     // Agregar el nuevo usuario a la lista de usuarios
     users.push(nuevoUsuario);
 
-    // Listar todos los usuarios nuevamente
-    listar();
+    // Guardar la lista actualizada en localStorage
+    localStorage.setItem('users', JSON.stringify(users));
 
     // Limpiar los campos después de registrar el usuario
     document.getElementById('nombre').value = '';
@@ -83,6 +85,12 @@ const register = () => {
     document.getElementById('telefono').value = '';
 
     alert('Usuario registrado con éxito.');
+};
+
+// Función para mostrar la tabla cuando se presione el botón
+const mostrarTabla = () => {
+    listar(); // Llamar a la función listar para llenar la tabla
+    tablaContainer.style.display = 'block'; // Mostrar la tabla
 };
 
 
