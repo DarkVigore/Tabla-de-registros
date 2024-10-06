@@ -1,0 +1,30 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #000000;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(235, 136, 7), rgb(240, 14, 14));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #6b1212, rgb(199, 23, 10));
+
+    /* Añadir altura completa */
+    min-height: 100vh;
+
+    /* Añadir propiedad de fondo para cubrir todo el contenido */
+    background-size: cover;
+}
+
+/* Estilo del footer */
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}

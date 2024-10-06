@@ -1,0 +1,190 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #000000;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(235, 136, 7), rgb(240, 14, 14));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #6b1212, rgb(199, 23, 10));
+
+    /* Añadir altura completa */
+    min-height: 100vh;
+
+    /* Añadir propiedad de fondo para cubrir todo el contenido */
+    background-size: cover;
+}
+
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Estilo de las tarjetas (cards) */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Asegura que las tarjetas estén centradas */
+}
+
+.card {
+    width: 300px; /* Ajusta el ancho de las tarjetas */
+    height: 410px; /* Ajusta la altura para que sea similar al ancho */
+    padding: 15px; /* Ajusta el padding interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra para destacar */
+    transition: transform 0.3s ease; /* Añadir una pequeña transición */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo */
+}
+
+/* Opcional: Efecto hover para las tarjetas */
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el cursor */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    flex: 1;
+}
+
+.card .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card .button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del footer */
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Estilos para la sección del formulario de contacto */
+#formulario {
+    padding: 20px;
+    background-color: #f8f8f8; /* Fondo claro para la sección */
+    margin: 20px auto; /* Centrar la sección y agregar margen superior e inferior */
+    max-width: 600px; /* Limitar el ancho máximo */
+    border-radius: 8px; /* Bordes redondeados para la sección */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+#formulario h2 {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilos para la tabla del formulario */
+#formulario table {
+    width: 100%; /* Ancho completo para la tabla */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+}
+
+/* Estilos para las celdas de la tabla */
+#formulario td {
+    padding: 10px; /* Espacio interno de las celdas */
+    vertical-align: top; /* Alineación vertical en la parte superior */
+}
+
+/* Estilos para los campos de entrada y textarea */
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario textarea {
+    width: 100%; /* Ancho completo para los campos de entrada */
+    padding: 8px; /* Espacio interno para los campos */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilos para el botón de envío */
+#formulario input[type="submit"] {
+    width: 100%; /* Ancho completo para el botón */
+    padding: 10px; /* Espacio interno para el botón */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor a mano al pasar por encima */
+    transition: background-color 0.3s; /* Efecto de transición en el fondo */
+}
+
+/* Efecto hover para el botón de envío */
+#formulario input[type="submit"]:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 480px) {
+    #formulario {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    }
+    
+    #formulario td {
+        display: block; /* Bloquear las celdas para apilarlas */
+        width: 100%; /* Ancho completo para celdas */
+        margin-bottom: 10px; /* Margen inferior entre celdas */
+    }
+    
+    #formulario td:last-child {
+        margin-bottom: 0; /* Elimina el margen inferior en la última celda */
+    }
+}
+html {
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}

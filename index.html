@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">Leonard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contact us
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#redes">Redes</a></li>
+                <li><a class="dropdown-item" href="#formulario">Formulario</a></li>                
+            </ul>
+          </li>
+        </ul>
+
+          <a href="register.html" class="btn btn-outline-success">Registrarse</a>
+      </div>
+    </div>
+  </nav>
+<body class="gradient-custom">
+    <main class="main-content">
+        <section class="cards-container">
+
+            <div class="card mt-3" >
+                <img src="https://sm.ign.com/t/ign_ap/cover/a/apex-legen/apex-legends_djb3.300.jpg" alt="Apex Legends">
+                <h3>Apex Legends</h3>
+                <a href="https://www.ea.com/es-es/games/apex-legends" class="button">Detalles</a>
+            </div>
+            <div class="card mt-3">
+                <img src="https://assets-prd.ignimgs.com/2020/09/29/genshin-impact-button-fin-1601346152039.jpg?width=300&crop=1%3A1%2Csmart&auto=webp" alt="Genshin Impact">
+                <h3>Genshin Impact</h3>
+                <a href="https://genshin.hoyoverse.com/es/" class="button">Detalles</a>
+            </div>
+
+            <div class="card mt-3">
+                <img src="https://assets-prd.ignimgs.com/2021/12/21/valorant-1640045685890.jpg?width=300&crop=1%3A1%2Csmart&auto=webp" alt="Valorant">
+                <h3>Valorant</h3>
+                <a href="https://playvalorant.com/es-mx/" class="button">Detalles</a>
+            </div>
+
+            <div class="card mt-3">
+                <img src="https://assets-prd.ignimgs.com/2023/04/19/overwatch2-1681945442681.jpg?width=300&crop=1%3A1%2Csmart&auto=webp" alt="Imagen 4">
+                <h3>Overwatch 2</h3>
+                <a href="https://overwatch.blizzard.com/es-es/" class="button">Detalles</a>
+            </div>
+
+            <div class="card mt-3">
+                <img src="https://assets-prd.ignimgs.com/2021/12/17/gta-5-button-2021-1639777058682.jpg?width=300&crop=1%3A1%2Csmart&auto=webp" alt="Imagen 5">
+                <h3>Grand theft auto V</h3>
+                <a href="https://www.rockstargames.com/es/gta-v" class="button">Detalles</a>
+            </div>
+
+            <div class="card mt-3">
+                <img src="https://assets-prd.ignimgs.com/2021/12/14/leagueoflegends-1639513774570.jpg?width=300&crop=1%3A1%2Csmart&auto=webp" alt="Imagen 6">
+                <h3>League of legends</h3>
+                <a href="https://www.leagueoflegends.com/es-es/" class="button">Detalles</a>
+            </div>
+
+            <div class="card mt-3">
+                <img src="https://sm.ign.com/t/ign_ap/cover/d/diablo-imm/diablo-immortal_6jky.300.jpg" alt="Imagen 7">
+                <h3>Diablo inmortal</h3>
+                <a href="https://diabloimmortal.blizzard.com/es-es/" class="button ">Detalles</a>
+            </div>
+
+            <div class="card mt-3">
+                <img src="https://assets-prd.ignimgs.com/2022/11/01/the-sims-4-1667312977731.jpg?width=300&crop=1%3A1%2Csmart&auto=webp" alt="Imagen 8">
+                <h3>The Sims 4</h3>
+                <a href="https://www.ea.com/es-es/games/the-sims" class="button">Detalles</a>
+            </div>
+        </section>
+    </main>
+    <section id="formulario">
+        <h2>Contacto</h2>
+        <table border="0">
+            <tr>
+                <td><label for="nombre">Nombre:</label></td>
+                <td><input type="text" id="nombre" name="nombre" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Correo Electrónico:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="mensaje">Mensaje:</label></td>
+                <td><textarea id="mensaje" name="mensaje" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Enviar"></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer id="redes" class="site-footer">
+        <p>Desarrollado por Leonard Orozco.</p>
+        <div class="social-links">
+            <a href="https://x.com/LeonardOrozco6" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/leonard.orozco.ordonez" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/orozcoleonar/" target="_blank">Instagram</a>
+        </div>
+    </footer>
